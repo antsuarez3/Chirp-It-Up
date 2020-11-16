@@ -26,19 +26,19 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// router.put("/:id", (req: express.Request, res: express.Response) => {
-//     let id: string = req.params.id;
-//     let chirpObj: chirp = {
-//         username: req.body.username,
-//         message: req.body.message
-//     };
-//     db.Chirps.UpdateChirp(id, chirpObj);
+router.put("/:id", (req: express.Request, res: express.Response) => {
+    let id: string = req.params.id;
+    let chirpObj: chirp = {
+        username: req.body.username,
+        message: req.body.message
+    };
+    db.Chirps.UpdateChirp(id, chirpObj);
 
-//     res.sendStatus(200);
-// });
+    res.sendStatus(200);
+});
 
 interface chirp {
-    username: string,
+    username: string,   
     message: string
 }
 
